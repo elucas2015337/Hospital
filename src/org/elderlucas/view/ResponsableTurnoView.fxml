@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.ResponsableTurnoController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo" />
+      <Label layoutX="341.0" layoutY="13.0" text="Responsables de Turno">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="75.0" text="Nombre">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="100.0" layoutY="71.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="397.0" layoutY="75.0" text="Apellido">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellido" editable="false" layoutX="465.0" layoutY="71.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="21.0" layoutY="118.0" prefHeight="17.0" prefWidth="153.0" text="Telefono Personal">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefono" editable="false" layoutX="180.0" layoutY="114.0" onKeyTyped="#SoloNumerosEnteros" prefHeight="25.0" prefWidth="173.0" promptText="Menos de 8 digitos" />
+      <Button fx:id="btnEliminar" layoutX="297.0" layoutY="529.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="561.0" layoutY="529.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="116.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="767.0" layoutY="529.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="Reporte" />
+      <Label layoutX="398.0" layoutY="118.0" text="Area">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbArea" disable="true" layoutX="561.0" layoutY="114.0" prefWidth="150.0" promptText="Area" />
+      <ComboBox fx:id="cmbCargo" disable="true" layoutX="202.0" layoutY="157.0" prefWidth="150.0" promptText="Cargo" />
+      <Label layoutX="27.0" layoutY="161.0" text="Cargo">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblResponsables" layoutX="18.0" layoutY="222.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="938.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colNombre" prefWidth="208.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="225.0" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="191.0" text="Telefono Personal" />
+            <TableColumn fx:id="colCodigoArea" prefWidth="128.0" text="Codigo de Area" />
+            <TableColumn fx:id="colCodigoCargo" prefWidth="110.0" text="Codigo de Cargo" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imageResponsable" fitHeight="130.0" fitWidth="153.0" layoutX="788.0" layoutY="19.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1234.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="802.0" layoutY="170.0" mnemonicParsing="false" onAction="#ventanaAreas" text="Areas" />
+      <Button layoutX="857.0" layoutY="170.0" mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" />
+   </effect>
+</AnchorPane>

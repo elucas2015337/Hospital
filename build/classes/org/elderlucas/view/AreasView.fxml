@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.AreasController">
+   <children>
+      <TableView fx:id="tblAreas" layoutX="21.0" layoutY="132.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="285.0" prefWidth="389.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" text="Código" />
+            <TableColumn fx:id="colNombreArea" prefWidth="377.0" text="Nombre del Área" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="424.0" layoutY="156.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font></Button>
+      <Label layoutX="23.0" layoutY="75.0" text="Nombre del Área">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreArea" editable="false" layoutX="165.0" layoutY="71.0" prefHeight="25.0" prefWidth="195.0" />
+      <ImageView fx:id="imageAreas" fitHeight="109.0" fitWidth="109.0" layoutX="428.0" layoutY="21.0" onMouseClicked="#ventanaResponsableTurno" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Area.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEliminar" layoutX="424.0" layoutY="221.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="424.0" layoutY="285.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="116.0" text="Editar">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="424.0" layoutY="344.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="Reporte">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font></Button>
+      <Label layoutX="235.0" layoutY="14.0" text="Áreas" textFill="#4800ff">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" color="#6995eb" />
+   </effect>
+</AnchorPane>

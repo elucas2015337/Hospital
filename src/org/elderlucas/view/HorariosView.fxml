@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.HorariosController">
+   <children>
+      <TableView fx:id="tblHorarios" layoutX="37.0" layoutY="234.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="285.0" prefWidth="896.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="87.0" text="Codigo" />
+          <TableColumn fx:id="colEntrada" prefWidth="181.0" text="Horario de Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="183.0" text="Horario de Salida" />
+            <TableColumn fx:id="colLunes" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="87.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="87.0" text="Miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="97.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="93.0" text="Viernes" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo" />
+      <Label layoutX="442.0" layoutY="14.0" text="Horarios" textFill="#3b00fc">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="75.0" text="Horario de Entrada">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEntrada" editable="false" layoutX="172.0" layoutY="71.0" prefHeight="25.0" prefWidth="207.0" />
+      <Label layoutX="397.0" layoutY="75.0" text="Horario de Salida">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSalida" editable="false" layoutX="536.0" layoutY="71.0" prefHeight="25.0" prefWidth="207.0" />
+      <ImageView fx:id="imageHorarios" fitHeight="127.0" fitWidth="130.0" layoutX="819.0" layoutY="20.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/horariosLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEliminar" layoutX="297.0" layoutY="529.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="561.0" layoutY="529.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="116.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="767.0" layoutY="529.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="Reporte" />
+      <CheckBox fx:id="cbxLunes" disable="true" layoutX="59.0" layoutY="138.0" mnemonicParsing="false" text="Lunes">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbxMartes" disable="true" layoutX="215.0" layoutY="138.0" mnemonicParsing="false" text="Martes">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbxMiercoles" disable="true" layoutX="372.0" layoutY="138.0" mnemonicParsing="false" text="Miercoles">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbxJueves" disable="true" layoutX="530.0" layoutY="138.0" mnemonicParsing="false" text="Jueves">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbxViernes" disable="true" layoutX="685.0" layoutY="138.0" mnemonicParsing="false" text="Viernes">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+      </CheckBox>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" color="#00a3f0" />
+   </effect>
+</AnchorPane>

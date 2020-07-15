@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.MenuPrincipalController">
+   <children>
+      <ImageView fx:id="fondoImage" fitHeight="434.0" fitWidth="715.0" onMouseClicked="#fondoBlurSalida" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hospitalFonfo.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <MenuBar layoutX="503.0" layoutY="-3.0" onMouseEntered="#fondoBlur">
+        <menus>
+          <Menu mnemonicParsing="false" onShown="#fondoBlur" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPacientes" text="Pacientes">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT1" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT2" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidades" text="Especialidades">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT3" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaResponsableTurno" text="Responsables de Turno">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT4" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT5" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Especialidad de Medico">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT6" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurnos" text="Turnos">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT7" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte de citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#infoProgramador" text="Programador">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT8" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#84a8d1" elevation="78.49" />
+               </light>
+            </Lighting>
+         </effect>
+      </MenuBar>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1234.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="userImage" fitHeight="71.0" fitWidth="70.0" layoutX="631.0" layoutY="350.0" onMouseClicked="#ventanaLogin" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblCerrar" layoutX="623.0" layoutY="329.0" textFill="WHITE" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

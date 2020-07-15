@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.PacientesController">
+   <children>
+      <ImageView fx:id="imagePacientes" fitHeight="183.0" fitWidth="223.0" layoutX="1063.0" layoutY="14.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Pacientes.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblPacientes" layoutX="23.0" layoutY="234.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="285.0" prefWidth="1216.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="59.0" text="Codigo" />
+          <TableColumn fx:id="colDPI" prefWidth="149.0" text="DPI" />
+          <TableColumn fx:id="colApellido" prefWidth="188.0" text="Apellido" />
+            <TableColumn fx:id="colNombre" prefWidth="193.0" text="Nombre" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="122.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="67.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="192.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" prefWidth="169.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="75.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="108.0" layoutY="536.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo" />
+      <Label layoutX="552.0" layoutY="19.0" text="Pacientes">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDPI" disable="true" layoutX="79.0" layoutY="71.0" onKeyTyped="#SoloNumerosEnteros" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="33.0" layoutY="75.0" text="DPI">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="303.0" layoutY="75.0" text="Apellidos">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="380.0" layoutY="71.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="674.0" layoutY="75.0" text="Nombres">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="742.0" layoutY="71.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="29.0" layoutY="118.0" text="Fecha de Nacimiento">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="118.0" text="Edad">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEdad" editable="false" layoutX="384.0" layoutY="114.0" prefHeight="25.0" prefWidth="80.0" promptText="No ingresar" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="535.0" layoutY="114.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="489.0" layoutY="118.0" text="Sexo">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="165.0" text="Dirección">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="135.0" layoutY="161.0" prefHeight="25.0" prefWidth="525.0" />
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="788.0" layoutY="114.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label layoutX="702.0" layoutY="118.0" text="Ocupación">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageContacto" fitHeight="62.0" fitWidth="63.0" layoutX="1032.0" layoutY="108.0" onMouseClicked="#ventanaContactoUrgencia" onMouseEntered="#image3" onMouseExited="#image4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/contactoUrgencia.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEliminar" layoutX="396.0" layoutY="536.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="728.0" layoutY="536.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="116.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="1056.0" layoutY="536.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="50.0" prefWidth="116.0" text="Reporte" />
+      <DatePicker fx:id="dateNacimiento" disable="true" editable="false" layoutX="189.0" layoutY="114.0" prefHeight="25.0" prefWidth="116.0" promptText="Fecha -&gt;" />
+   </children>
+   <effect>
+      <InnerShadow color="#00bbff" />
+   </effect>
+</AnchorPane>

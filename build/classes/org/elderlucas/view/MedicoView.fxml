@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.MedicosController">
+   <children>
+      <Label layoutX="412.0" layoutY="31.0" text="Medicos">
+         <font>
+            <Font name="Consolas" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageMedico" fitHeight="200.0" fitWidth="235.0" layoutX="771.0" layoutY="13.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/b76de73edf814db22e2ae74c01739b5c-doctor-avatar-icono-de-trazo-by-vexels.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="111.0" text="Licencia Medica">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLicenciaMedica" disable="true" layoutX="206.0" layoutY="113.0" onKeyTyped="#SoloNumerosEnteros" prefHeight="25.0" prefWidth="412.0" />
+      <Label layoutX="33.0" layoutY="157.0" text="Nombres">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="206.0" layoutY="160.0" prefHeight="25.0" prefWidth="412.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="206.0" layoutY="207.0" prefHeight="25.0" prefWidth="412.0" />
+      <Label layoutX="33.0" layoutY="205.0" text="Apellidos">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="251.0" text="Hora de Entrada">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="206.0" layoutY="254.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label layoutX="357.0" layoutY="251.0" text="Hora de Salida">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="480.0" layoutY="254.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label layoutX="648.0" layoutY="254.0" text="Turno Maximo">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTurno" editable="false" layoutX="771.0" layoutY="253.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label layoutX="152.0" layoutY="295.0" text="Sexo">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSexo" editable="false" layoutX="206.0" layoutY="295.0" prefHeight="25.0" prefWidth="346.0" />
+      <TableView fx:id="tblMedicos" layoutX="11.0" layoutY="350.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="266.0" prefWidth="964.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="70.0" text="Código" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="181.0" text="Licencia Medica" />
+          <TableColumn fx:id="colNombres" prefWidth="167.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="182.0" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" prefWidth="91.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="95.0" text="Salida" />
+            <TableColumn fx:id="colTurno" prefWidth="95.0" text="Turno Maximo" />
+            <TableColumn fx:id="colSexo" prefWidth="89.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="188.0" layoutY="622.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="80.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="364.0" layoutY="622.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="46.0" prefWidth="80.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="532.0" layoutY="622.0" mnemonicParsing="false" onAction="#editar" prefHeight="46.0" prefWidth="80.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="703.0" layoutY="622.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="46.0" prefWidth="80.0" text="Reporte" />
+      <ImageView fx:id="imageTelefonoMedico" fitHeight="52.0" fitWidth="70.0" layoutX="717.0" layoutY="147.0" onMouseClicked="#ventanaTelefonosMedico" onMouseEntered="#image3" onMouseExited="#image4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/telefonoMedico.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" color="#a2aea6" />
+   </effect>
+</AnchorPane>

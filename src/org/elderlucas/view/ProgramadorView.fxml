@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.InformacionController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="369.0" layoutX="-9.0" onMouseClicked="#regresarMenu" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo-en.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="182.0" layoutY="37.0" text="Nombre: Elder Austin">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="69.0" text="Apellidos: Lucas Vélez">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="173.0" fitWidth="151.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fotoProgramador.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="182.0" layoutY="101.0" text="Grado: 5to perito">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="216.0" text="Centro Educativo Tecnico Laboral KINAL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

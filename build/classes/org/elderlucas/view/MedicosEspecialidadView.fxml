@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.MedicoEspecialidadController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="561.0" layoutY="222.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo" />
+      <Label layoutX="239.0" layoutY="14.0" text="Especialdad de Medico" textFill="#251ccd">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" layoutX="561.0" layoutY="332.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="561.0" layoutY="442.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="Reporte" />
+      <Label layoutX="276.0" layoutY="81.0" text="Especialidad">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbEspecialidad" disable="true" layoutX="392.0" layoutY="77.0" prefWidth="150.0" promptText="Codigo Especialidad" />
+      <ComboBox fx:id="cmbMedico" disable="true" layoutX="99.0" layoutY="77.0" prefWidth="150.0" promptText="Codigo Medico" />
+      <Label layoutX="39.0" layoutY="81.0" text="Medico">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="18.0" layoutY="222.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="508.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colCodigoMedico" prefWidth="149.0" text="Codigo de Medico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="147.0" text="Codigo de Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="136.0" text="Codigo de Horario" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbHorario" disable="true" layoutX="99.0" layoutY="128.0" prefWidth="150.0" promptText="codigo de Horario" />
+      <Label layoutX="39.0" layoutY="132.0" text="Horario">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageMedicoEspecialidad" fitHeight="111.0" fitWidth="123.0" layoutX="572.0" layoutY="22.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MedicoEspecialidadImage.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" color="#2444c6" />
+   </effect>
+</AnchorPane>

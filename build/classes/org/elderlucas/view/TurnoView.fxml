@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.TurnosController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="34.0" layoutY="499.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="116.0" text="Nuevo" />
+      <Label layoutX="400.0" layoutY="12.0" text="Turnos" textFill="#251ccd">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" layoutX="231.0" layoutY="499.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="116.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="665.0" layoutY="499.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="Reporte" />
+      <Label layoutX="316.0" layoutY="57.0" text="Especialidad">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbMedicoEspecialidad" disable="true" layoutX="463.0" layoutY="53.0" prefWidth="150.0" promptText="Codigo Responsable de Turno" />
+      <ComboBox fx:id="cmbResponsableTurno" disable="true" layoutX="153.0" layoutY="98.0" prefWidth="150.0" promptText="Codigo Medico Especialidad" />
+      <Label layoutX="45.0" layoutY="102.0" text="Responsable">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTurnos" layoutX="18.0" layoutY="222.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="788.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="58.0" text="Codigo" />
+          <TableColumn fx:id="colFechaTurno" prefWidth="105.0" text="Fecha del Turno" />
+            <TableColumn fx:id="colFechaCita" prefWidth="117.0" text="Fecha de Cita" />
+            <TableColumn fx:id="colValor" prefWidth="95.0" text="Valor" />
+            <TableColumn fx:id="colMedicoEspecialidad" prefWidth="148.0" text="Especialidad de Medico" />
+            <TableColumn fx:id="colResponsableTurno" prefWidth="138.0" text="Responsable de Turno" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="120.0" text="Codigo de Paciente" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbPaciente" disable="true" layoutX="109.0" layoutY="53.0" prefWidth="150.0" promptText="codigo de Paciente" />
+      <Label layoutX="45.0" layoutY="57.0" text="Paciente">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageTurno" fitHeight="135.0" fitWidth="132.0" layoutX="665.0" layoutY="23.0" onMouseClicked="#regresarMenu" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TurnoLogo.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dpFechaTurno" disable="true" layoutX="184.0" layoutY="146.0" prefHeight="25.0" prefWidth="105.0" promptText="fecha -&gt;" />
+      <TextField fx:id="txtValor" disable="true" layoutX="464.0" layoutY="98.0" />
+      <Label layoutX="374.0" layoutY="102.0" text="Valor">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="150.0" text="Fecha del Turno">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="150.0" text="Fecha de Cita">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpFechaCita" disable="true" layoutX="508.0" layoutY="146.0" prefHeight="25.0" prefWidth="105.0" promptText="fecha -&gt;" />
+      <Button fx:id="btnEditar" layoutX="450.0" layoutY="499.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="116.0" text="Editar" />
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN" color="#2444c6" />
+   </effect>
+</AnchorPane>

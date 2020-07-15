@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elderlucas.controller.TelefonosMedicoController">
+   <children>
+      <TableView fx:id="tblTelefonosMedicos" layoutX="42.0" layoutY="262.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="579.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="118.0" text="Código" />
+          <TableColumn fx:id="colCodigoMedico" prefWidth="118.0" text="Código del Médico" />
+          <TableColumn fx:id="colTelefonoPersonal" prefWidth="187.0" text="Teléfono Personal" />
+            <TableColumn fx:id="colTelefonoTrabajo" prefWidth="171.0" text="Teléfono del Trabajo" />
+        </columns>
+      </TableView>
+      <Label layoutX="24.0" layoutY="146.0" text="Teléfono Personal">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="169.0" layoutY="206.0" prefWidth="150.0" promptText="Codigo de Medico" />
+      <TextField fx:id="txtTelefonoPersonal" disable="true" layoutX="169.0" layoutY="142.0" onKeyTyped="#SoloNumerosEnteros2" promptText="8 giditos" />
+      <Button fx:id="btnNuevo" layoutX="107.0" layoutY="466.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="64.0" text="Nuevo" />
+      <Label layoutX="221.0" layoutY="14.0" text="Telefonos de Médicos">
+         <font>
+            <Font name="Consolas" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoTrabajo" disable="true" layoutX="484.0" layoutY="142.0" onKeyTyped="#SoloNumerosEnteros" promptText="8 digitos" />
+      <Label layoutX="328.0" layoutY="146.0" text="Teléfono de Trabajo">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="210.0" text="Codigo del Medico">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageTelefonoMedico" fitHeight="115.0" fitWidth="150.0" layoutX="533.0" layoutY="14.0" onMouseClicked="#ventanaMedicos" onMouseEntered="#image1" onMouseExited="#image2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/telefonoMedico.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEliminar" layoutX="221.0" layoutY="466.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="64.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="338.0" layoutY="466.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="64.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="469.0" layoutY="466.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="64.0" text="Reporte" />
+   </children>
+   <effect>
+      <InnerShadow color="#17b5c9" />
+   </effect>
+</AnchorPane>
